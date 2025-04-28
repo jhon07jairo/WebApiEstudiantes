@@ -1,0 +1,62 @@
+@ApiEstudiantes_HostAddress = http://localhost:5280
+
+###
+GET {{ApiEstudiantes_HostAddress}}/api/estudiantes/
+Accept: application/json
+
+###
+
+GET {{ApiEstudiantes_HostAddress}}/api/estudiantes/4
+Accept: application/json
+
+###
+
+POST {{ApiEstudiantes_HostAddress}}/api/estudiantes/
+Content-Type: application/json
+Accept: application/json
+
+{
+    "nombre": "Ana Sánchez",
+    "materiasSeleccionadas": [
+        {
+            "materiaId": 1
+        },
+        {
+            "materiaId": 3
+        },
+        {
+            "materiaId": 4
+        }
+    ]
+}
+
+###
+
+PUT {{ApiEstudiantes_HostAddress}}/api/estudiantes/1
+Content-Type: application/json
+Accept: application/json
+
+{
+    "nombre": "Juanito Pérez Actualizado",
+    "materiasSeleccionadas": [
+        {
+            "materiaId": 2
+        },
+        {
+            "materiaId": 4
+        },
+        {
+            "materiaId": 5
+        }
+    ]
+}
+
+###
+
+DELETE {{ApiEstudiantes_HostAddress}}/api/estudiantes/3
+Accept: application/json
+
+###
+
+GET {{ApiEstudiantes_HostAddress}}/api/Estudiantes/1/companeros
+Accept: application/json
